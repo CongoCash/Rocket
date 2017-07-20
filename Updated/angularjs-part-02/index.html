@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AngularJS Part 2</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+  </head>
+  <!-- Declare our app on the page -->
+  <body ng-app="myApp">
+
+    <!-- Example of how to use ng-include -->
+    <div ng-include="'templates/demo.html'"></div>
+
+    <hr>
+
+    <!-- Example of how to instantiate a controller from a template -->
+    <div ng-controller="DemoController">
+      <h2>Ten Tivix Repositories @ Github</h2>
+      <!-- Let's only show the top 10 Tivix repositories. -->
+      <span ng-repeat="item in items | limitTo:10 | orderBy:name">{{item.name}}<br></span>
+      <span ng-if="!items.length">No items right now.</span>
+      <span ng-if="error">There was a problem retrieving these repositories from the API.</span>
+    </div>
+    <!-- Here's another controller we'll use on this page. -->
+    <hr>
+    <div ng-controller="DemoController2">
+      <h4>6 times 5 is {{result || "..."}}</h4>
+      <hr>
+      <!-- Below is a quick example of a simple form -->
+      <form name="demoForm">
+        Value 1 <input type="radio" ng-model="demoRadioButton" name="demoField" value="1" required>
+        Value 2 <input type="radio" ng-model="demoRadioButton" name="demoField" value="2" required>
+        Value 3 <input type="radio" ng-model="demoRadioButton" name="demoField" value="3" required> -- 
+         Valid?  [ {{ demoForm.demoField.$valid }} ]
+         <!-- Let's report on the details of the validation errors. -->
+         <span ng-repeat="(error_name, is_invalid) in demoForm.demoField.$error">
+           <span ng-if="is_invalid">{{error_name | uppercase}} </span>
+         </span>
+         <!-- Demonstrate how we can access the forms API from the controller. -->
+         <button ng-click="validStatus()">Tell me validation state</button>
+      </form>
+    </div>
+
+    <hr>
+
+    <!-- The ng-view block denotes where all route related content/controllers will be loaded. -->
+    <div ng-view=""></div>
+
+    <!-- Include our AngularJS platform files here. -->
+    <script src="scripts/angularjs/angular.js"></script>
+    <script src="scripts/angularjs/angular-route.js"></script>
+    <!-- Declare our Application and Routes -->
+    <script src="scripts/app.js"></script>
+    <!-- Include all supporting controllers, services, directives, and filters -->
+    <script src="scripts/controllers/demo.js"></script>
+    <script src="scripts/controllers/demo2.js"></script>
+    <script src="scripts/services/demo.js"></script>
+    <script src="scripts/services/tools.js"></script>
+    <!-- Include controllers, services, etc. to support routes -->
+    <script src="scripts/routes.js"></script>
+    <script src="scripts/controllers/demoRoute.js"></script>
+    <script src="scripts/controllers/demoRoute2.js"></script>
+    <!-- End of script includes. -->
+
+</body>
+</html>

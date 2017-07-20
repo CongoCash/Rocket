@@ -1,0 +1,10 @@
+# Install Django
+django==1.7.4
+
+# Install Django-REST-Framework
+djangorestframework==3.0.4
+markdown
+django-filter
+
+# Install CORS Header package to allow SPA application talking in cross domains
+django-cors-headers==1.0.0

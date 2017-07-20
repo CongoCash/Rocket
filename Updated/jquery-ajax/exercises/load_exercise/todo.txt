@@ -1,0 +1,4 @@
+Todos
+- When Inbox (1) is clicked, display inbox.txt message on content(gray box)
+- When Sent Mail is clicked, display sent_mail.txt on content(gray box)
+- When Drafts is clicked, display draft.txt on content(gray box)

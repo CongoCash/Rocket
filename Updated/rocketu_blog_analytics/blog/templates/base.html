@@ -1,0 +1,70 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>My Blog</title>
+
+        {% block extra_header %}{% endblock extra_header %}
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'email_signup' %}"></a></li>
+                </ul>
+                <h3 class="text-muted">My Blog</h3>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-10">
+                    {% block main %}{% endblock main %}
+                </div>
+
+                <div class="col-md-2">
+                    <div>Blog tags go here!</div>
+                    {% for tag in tags %}
+                    <p>{{ tag.posts.count }}
+                        <span class="label label-info"><a href='{% url 'filter_tags' tag.name %}'>{{ tag.name }}</a></span>
+                        <a href='{% url 'filter_tags' tag.name %}'></a>
+                    </p>
+                    {% endfor %}
+                    <hr>
+                    {% for month, count in month_count.iteritems %}
+                        <p>{{ month }}: {{ count }}</p>
+                    {% endfor %}
+                    <hr>
+                        {{ year_count.1.0 }}
+                        {% for month, count in year_count.1.0.iteritems %}
+                            <p>{{ month }} {{ count }}</p>
+                        {% endfor %}
+
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">Latest blog post goes here!</div
+            </div>
+
+            <hr>
+
+            <div class="footer">
+                <div class="pull-right">Welcome user from {{ location }}!</div>
+                <p>&copy; My Blog 2014</p>
+
+            </div>
+        </div>
+    </body>
+</html>

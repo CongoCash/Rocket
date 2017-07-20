@@ -1,0 +1,15 @@
+REFS
+
+The DOM
+https://www.webucator.com/tutorial/advanced-javascript/the-html-document-object-model.cfm
+
+Set Timeout
+http://javascript.info/tutorial/settimeout-setinterval
+
+Callbacks
+http://cwbuecheler.com/web/tutorials/2013/javascript-callbacks/
+
+Event Loop
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/EventLoop
+
+http://www.altitudelabs.com/blog/what-is-the-javascript-event-loop/

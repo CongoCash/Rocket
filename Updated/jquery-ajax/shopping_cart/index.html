@@ -1,0 +1,110 @@
+<html>
+<head>
+<title>shopping cart with AJAX</title>
+<script type="text/javascript" src="../lib/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="../lib/jquery.livequery.js"></script>
+<link href="cart.css" rel="stylesheet" />
+<script src="cart.js"></script>
+</head>
+
+<body>
+
+<div align="left">
+	
+	<div id="wrap" align="left">
+		
+		<ul>
+			<li id="1">
+				<img src="./images/a1.png" class="items" height="100" alt="" />
+				
+				<br clear="all" />
+				<div><span class="name">Mac/OS X: Price</span>: $<span class="price">800</span> </div>
+			</li>
+			<li id="2">
+				<img src="./images/5.png" class="items" height="100" alt="" />
+				
+				<br clear="all" />
+				<div><span class="name">IPhone 3GS </span>: $<span class="price">500 </span></div>
+			</li>
+			<li id="3">
+				<img src="./images/1.png" class="items" height="100" alt="" />
+				
+				<br clear="all" />
+				<div><span class="name">Apple IPad </span>: $<span class="price">450</span></div>
+			</li>
+			
+			<li id="4">
+				<img src="./images/6.png" class="items" height="100" alt="" />
+				
+				<br clear="all" />
+				<div><span class="name">Mac NoteBook </span>: $<span class="price">1200 </span></div>
+			</li>
+			<li id="5">
+				<img src="./images/7.png" class="items" height="100" alt="" />
+				
+				<br clear="all" />
+				<div> <span class="name">Bag : Buy Now Price </span>: $<span class="price">65</span></div>
+			</li>
+			
+			<li id="6">
+				<img src="./images/5.png" class="items" height="100" alt="" />
+				
+				<br clear="all" />
+				<div><span class="name">IPhone 4GS </span>: $<span class="price">800</span> </div>
+			</li>
+			
+			<li id="7">
+				<img src="./images/7.png" class="items" height="100" alt="" />
+				
+				<br clear="all" />
+				<div><span class="name"> Bag : Buy Now Price </span>: $<span class="price">45</span></div>
+			</li>
+			<li id="8">
+				<img src="./images/6.png" class="items" height="100" alt="" />
+				
+				<br clear="all" />
+				<div><span class="name">Mac NoteBook </span>: $<span class="price">900 </span></div>
+			</li>
+			
+			<li id="9">
+				<img src="./images/8.png" class="items" height="100" alt="" />
+				
+				<br clear="all" />
+				<div><span class="name">Sony Super Ear Phone </span>: $<span class="price">20</span></div>
+			</li>
+			
+		</ul>
+		
+		<br clear="all" />
+		
+		<div id="bottomBar" align="left"><img src="./images/carts.png" id="cart" /></div>
+	
+	</div>
+	
+	<div id="left_bar"> 
+		
+		<form action="#" id="cart_form" name="cart_form">
+		
+		<div class="cart-info"></div>
+		
+		<div class="cart-total">
+		
+			<b>Total Charges:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> $<span>0</span>
+			
+			<input type="hidden" name="total-hidden-charges" id="total-hidden-charges" value="0" />
+		</div>
+		
+		<button type="submit" id="Submit">CheckOut</button>
+		
+		</form>
+		
+	</div> 
+		
+		
+	
+</div>
+
+
+
+</body>
+</html>

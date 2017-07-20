@@ -1,0 +1,35 @@
+#container{
+	width:800px;
+}
+#header{
+	background-color:#FFA500;
+}
+
+#header h1{
+	margin-bottom:0;
+	text-align:center;
+}
+
+#menu{
+	background-color:#FFD700;
+	height:500px;
+	width:200px;
+	float:left;
+}
+
+#content{
+	background-color:#EEEEEE;
+	height:500px;
+	width:600px;
+	float:left;
+}
+
+#content #email_content{
+	text-align:center;
+}
+
+#footer{
+	background-color:#FFA500;
+	clear:both;
+	text-align:center;
+}
